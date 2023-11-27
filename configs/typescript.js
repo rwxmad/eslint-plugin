@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
-    "plugin:@rwxmad/eslint-plugin/default",
-    "plugin:@typescript-eslint/recommended",
+    'plugin:@rwxmad/eslint-plugin/default',
+    'plugin:@typescript-eslint/recommended',
   ],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
 };

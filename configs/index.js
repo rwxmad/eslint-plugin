@@ -1,4 +1,4 @@
 module.exports = {
-  default: require("./default"),
-  typescript: require("./typescript"),
+  default: require('./default'),
+  typescript: require('./typescript'),
 };
