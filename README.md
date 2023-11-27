@@ -44,6 +44,22 @@ npm i @rwxmad/eslint-plugin
 }
 ```
 
+- Vue
+
+```json
+{
+  "extends": ["plugin:@rwxmad/eslint-plugin/vue"]
+}
+```
+
+- Vue + typescript config
+
+```json
+{
+  "extends": ["plugin:@rwxmad/eslint-plugin/vue-typescript"]
+}
+```
+
 3. You can add two scripts to your package.json to lint and/or fix:
 
 ```json
