@@ -1,0 +1,25 @@
+{
+  "name": "@rwxmad/eslint-plugin",
+  "version": "1.0.1",
+  "description": "ESLint configuration",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwxmad/eslint-config-rwxmad.git"
+  },
+  "author": "rwxmad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rwxmad/eslint-config-rwxmad/issues"
+  },
+  "homepage": "https://github.com/rwxmad/eslint-config-rwxmad#readme",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.4.0",
+    "eslint-config-prettier": "^8.3.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.4.0"
+  }
+}
