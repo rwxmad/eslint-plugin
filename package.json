@@ -1,6 +1,6 @@
 {
   "name": "@rwxmad/eslint-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint configuration",
   "main": "index.js",
   "repository": {
@@ -19,7 +19,8 @@
     "eslint": "^8.4.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-vue": "^9.18.1"
   },
   "peerDependencies": {
     "eslint": "^8.4.0"
