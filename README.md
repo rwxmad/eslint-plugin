@@ -28,6 +28,22 @@ npm i @rwxmad/eslint-plugin
 }
 ```
 
+- React config
+
+```json
+{
+  "extends": ["plugin:@rwxmad/eslint-plugin/react"]
+}
+```
+
+- React + typescript config
+
+```json
+{
+  "extends": ["plugin:@rwxmad/eslint-plugin/react-typescript"]
+}
+```
+
 3. You can add two scripts to your package.json to lint and/or fix:
 
 ```json
