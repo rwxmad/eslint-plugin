@@ -3,5 +3,6 @@ module.exports = {
   extends: [
     'plugin:@rwxmad/eslint-plugin/vue',
     'plugin:@rwxmad/eslint-plugin/typescript',
+    '@vue/typescript/recommended',
   ],
 };
