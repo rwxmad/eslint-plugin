@@ -1,5 +1,8 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
+  },
   extends: [
     'plugin:@rwxmad/eslint-plugin/vue',
     'plugin:@rwxmad/eslint-plugin/typescript',
