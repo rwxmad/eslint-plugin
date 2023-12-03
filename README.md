@@ -4,10 +4,10 @@
 
 1. If you don't already have a `package.json` file, create one with `npm init`.
 
-2. Then you need to install everything needed by the config:
+2. Then you need to install everything needed by the plugin:
 
 ```bash
-npm i @rwxmad/eslint-plugin
+npm i eslint @rwxmad/eslint-plugin --save-dev
 ```
 
 3. Then, add this to your `.eslintrc` file:
