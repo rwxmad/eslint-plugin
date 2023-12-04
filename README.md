@@ -44,7 +44,7 @@ npm i eslint @rwxmad/eslint-plugin --save-dev
 }
 ```
 
-- Vue
+- Vue config
 
 ```json
 {
