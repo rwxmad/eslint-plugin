@@ -20,7 +20,7 @@ import configs from '@rwxmad/eslint-plugin';
 export default configs['config'];
 ```
 
-> NOTE:
+> [!NOTE]
 > Available configurations
 
 - `default`
