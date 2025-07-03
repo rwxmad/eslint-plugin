@@ -1,3 +1,3 @@
-module.exports = {
-  configs: require('./configs'),
-};
+import { configs } from './configs/index.js';
+
+export default configs;

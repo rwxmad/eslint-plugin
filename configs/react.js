@@ -1,4 +1,14 @@
-module.exports = {
-  extends: ['plugin:@rwxmad/eslint-plugin/default'],
-  plugins: ['react', 'react-hooks'],
-};
+import defaultConfig from './default.js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export default [
+  ...defaultConfig,
+  {
+    plugins: { react, 'react-hooks': reactHooks },
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+  },
+];

@@ -12,53 +12,23 @@ npm i eslint @rwxmad/eslint-plugin --save-dev
 
 3. Then, add this to your `.eslintrc` file:
 
-- Default config
+- Define config `eslint.config.js`
 
-```json
-{
-  "extends": ["plugin:@rwxmad/eslint-plugin/default"]
-}
+```js
+import configs from '@rwxmad/eslint-plugin';
+
+export default configs['config'];
 ```
 
-- Typescript config
+> NOTE:
+> Available configurations
 
-```json
-{
-  "extends": ["plugin:@rwxmad/eslint-plugin/typescript"]
-}
-```
-
-- React config
-
-```json
-{
-  "extends": ["plugin:@rwxmad/eslint-plugin/react"]
-}
-```
-
-- React + typescript config
-
-```json
-{
-  "extends": ["plugin:@rwxmad/eslint-plugin/react-typescript"]
-}
-```
-
-- Vue config
-
-```json
-{
-  "extends": ["plugin:@rwxmad/eslint-plugin/vue"]
-}
-```
-
-- Vue + typescript config
-
-```json
-{
-  "extends": ["plugin:@rwxmad/eslint-plugin/vue-typescript"]
-}
-```
+- `default`
+- `typescript`
+- `react`
+- `react-typescript`
+- `vue`
+- `vue-typescript`
 
 3. You can add two scripts to your package.json to lint and/or fix:
 

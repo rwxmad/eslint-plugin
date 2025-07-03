@@ -1,8 +1,4 @@
-module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true,
-  },
-  extends: ['eslint:recommended', 'prettier'],
-};
+import js from '@eslint/js';
+import prettier from 'eslint-config-prettier';
+
+export default [js.configs.recommended, prettier];

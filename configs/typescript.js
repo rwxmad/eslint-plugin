@@ -1,8 +1,4 @@
-module.exports = {
-  extends: [
-    'plugin:@rwxmad/eslint-plugin/default',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-};
+import defaultConfig from './default.js';
+import tseslint from 'typescript-eslint';
+
+export default [...defaultConfig, tseslint.configs.recommended];
