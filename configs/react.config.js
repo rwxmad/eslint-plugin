@@ -1,4 +1,4 @@
-import defaultConfig from './default.js';
+import defaultConfig from './default.config.js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 

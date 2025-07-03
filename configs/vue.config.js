@@ -1,4 +1,4 @@
-import defaultConfig from './default.js';
+import defaultConfig from './default.config.js';
 import vuePlugin from 'eslint-plugin-vue';
 
 import pluginVue from 'eslint-plugin-vue';

@@ -1,4 +1,4 @@
-import defaultConfig from './default.js';
+import defaultConfig from './default.config.js';
 import typescriptConfig from './typescript.config.js';
 import reactConfig from './react.config.js';
 import reactTypescriptConfig from './react-typescript.config.js';
