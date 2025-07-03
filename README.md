@@ -17,7 +17,7 @@ npm i eslint @rwxmad/eslint-plugin --save-dev
 ```js
 import configs from '@rwxmad/eslint-plugin';
 
-export default configs['config'];
+export default [...configs.default];
 ```
 
 > [!NOTE]
