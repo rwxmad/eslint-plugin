@@ -6,11 +6,22 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
+          cache: "npm"
+      - run: npm ci
+      - name: Verify release tag matches package.json version
+        run: |
+          PKG_VERSION=$(node -p "require('./package.json').version")
+          TAG="${{ github.event.release.tag_name }}"
+          if [ "v$PKG_VERSION" != "$TAG" ]; then
+            echo "Tag $TAG does not match package.json v$PKG_VERSION"
+            exit 1
+          fi
+      - run: npm run verify:configs
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

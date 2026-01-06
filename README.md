@@ -1,42 +1,65 @@
-# eslint-plugin
+# @rwxmad/eslint-plugin
 
 ## Install
 
-1. If you don't already have a `package.json` file, create one with `npm init`.
+```bash
+npm i -D @rwxmad/eslint-plugin eslint @eslint/js eslint-config-prettier
+```
 
-2. Then you need to install everything needed by the plugin:
+Add only what you need for the presets you use:
 
 ```bash
-npm i eslint @rwxmad/eslint-plugin --save-dev
+# TypeScript
+npm i -D typescript typescript-eslint
+
+# React
+npm i -D eslint-plugin-react eslint-plugin-react-hooks
+
+# Vue
+npm i -D eslint-plugin-vue
+
+# Vue + TypeScript (in addition to TypeScript deps)
+npm i -D @vue/eslint-config-typescript
 ```
 
-3. Then, add this to your `.eslintrc` file:
+## Usage (flat config)
 
-- Define config `eslint.config.js`
+Create `eslint.config.js` (or `eslint.config.mjs` if your project is not ESM).
+
+Use subpath entrypoints (root entrypoint is not provided).
 
 ```js
-import configs from '@rwxmad/eslint-plugin';
+import config from '@rwxmad/eslint-plugin/default'
 
-export default [...configs.default];
+export default [...config]
 ```
 
-> [!NOTE]
-> Available configurations
+Available presets:
 
-- `default`
-- `typescript`
-- `react`
-- `react-typescript`
-- `vue`
-- `vue-typescript`
+- `@rwxmad/eslint-plugin/default`
+- `@rwxmad/eslint-plugin/typescript`
+- `@rwxmad/eslint-plugin/react`
+- `@rwxmad/eslint-plugin/react-typescript`
+- `@rwxmad/eslint-plugin/vue`
+- `@rwxmad/eslint-plugin/vue-typescript`
 
-3. You can add two scripts to your package.json to lint and/or fix:
+Example (React):
+
+```js
+import config from '@rwxmad/eslint-plugin/react'
+
+export default [...config]
+```
+
+[!NOTE] The React preset includes the JSX runtime rules (no `react` import required).
+If you use the classic runtime, override `react/react-in-jsx-scope` and
+`react/jsx-uses-react`.
+
+[!TIP] You can add two scripts to your package.json to lint and/or fix:
 
 ```json
 "scripts": {
   "lint": "eslint .",
   "lint:fix": "eslint . --fix"
-},
+}
 ```
-
-4. Now you can manually lint your code by running `npm run lint` and fix all fixable issues with `npm run lint:fix`.
