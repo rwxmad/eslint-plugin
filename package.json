@@ -14,13 +14,11 @@
   },
   "type": "module",
   "exports": {
-    "./default": "./dist/default.mjs",
     "./package.json": "./package.json",
-    "./react": "./dist/react.mjs",
-    "./react-typescript": "./dist/react-typescript.mjs",
-    "./typescript": "./dist/typescript.mjs",
-    "./vue": "./dist/vue.mjs",
-    "./vue-typescript": "./dist/vue-typescript.mjs"
+    "./*": {
+      "types": "./dist/*.d.mts",
+      "default": "./dist/*.mjs"
+    }
   },
   "files": [
     "dist",

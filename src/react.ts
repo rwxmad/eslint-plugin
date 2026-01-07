@@ -1,3 +1,4 @@
+import type { Linter } from 'eslint'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import { baseConfig, prettierConfig } from './default.js'
@@ -25,6 +26,10 @@ export const reactConfig = [
   },
 ]
 
-const config = [...baseConfig, ...reactConfig, ...prettierConfig]
+const config: Linter.Config[] = [
+  ...baseConfig,
+  ...reactConfig,
+  ...prettierConfig,
+]
 
 export default config

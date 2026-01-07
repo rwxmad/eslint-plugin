@@ -1,8 +1,9 @@
+import type { Linter } from 'eslint'
 import tseslint from 'typescript-eslint'
 import { baseConfig, prettierConfig } from './default.js'
 import { reactConfig } from './react.js'
 
-const reactTypescriptConfig = [
+const reactTypescriptConfig: Linter.Config[] = [
   ...baseConfig,
   ...reactConfig,
   ...tseslint.configs.recommended,
