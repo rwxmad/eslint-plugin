@@ -9,6 +9,9 @@ export default defineConfig({
     'src/vue.ts',
     'src/vue-typescript.ts',
   ],
+  dts: {
+    tsconfig: 'tsconfig.build.json',
+  },
   format: ['esm'],
   outDir: 'dist',
   clean: true,

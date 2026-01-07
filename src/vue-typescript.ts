@@ -1,3 +1,5 @@
+import type { TSESLint } from '@typescript-eslint/utils'
+import type { Linter } from 'eslint'
 import {
   defineConfigWithVueTs,
   vueTsConfigs,
@@ -5,12 +7,14 @@ import {
 import { baseConfig, prettierConfig } from './default.js'
 import { vueConfig } from './vue.js'
 
-const config = defineConfigWithVueTs(
+type FlatConfigItem = Linter.Config | TSESLint.FlatConfig.Config
+
+const config: FlatConfigItem[] = defineConfigWithVueTs(
   baseConfig,
   vueConfig,
   vueTsConfigs.recommended,
 )
 
-const vueTypescriptConfig = [...config, ...prettierConfig]
+const vueTypescriptConfig: FlatConfigItem[] = [...config, ...prettierConfig]
 
 export default vueTypescriptConfig
