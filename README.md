@@ -51,11 +51,13 @@ import config from '@rwxmad/eslint-plugin/react'
 export default [...config]
 ```
 
-[!NOTE] The React preset includes the JSX runtime rules (no `react` import required).
-If you use the classic runtime, override `react/react-in-jsx-scope` and
-`react/jsx-uses-react`.
+> [!NOTE]
+> The React preset includes the JSX runtime rules (no `react` import required).
+> If you use the classic runtime, override `react/react-in-jsx-scope` and
+> `react/jsx-uses-react`.
 
-[!TIP] You can add two scripts to your package.json to lint and/or fix:
+> [!TIP]
+> You can add two scripts to your package.json to lint and/or fix:
 
 ```json
 "scripts": {
